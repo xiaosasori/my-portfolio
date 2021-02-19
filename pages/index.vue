@@ -1,67 +1,67 @@
 <template>
-  <div class="mt-4">
-    <section>
-      <div class="container mx-auto px-4">
-        <h1 class="text-4xl font-bold">
-          Articles
-        </h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
-          <ArticleCard
-            v-for="article in articles"
-            :key="article.title"
-            :title="article.title"
-            :description="article.description"
-            :author="article.author"
-            :date="article.date.toLocaleDateString()"
-          />
-        </div>
-      </div>
-    </section>
-  </div>
+  <section id="posts">
+    <PostPreview
+      v-for="post in posts"
+      :id="post.id"
+      :key="post.id"
+      :title="post.title"
+      :excerpt="post.previewText"
+      :thumbnail-image="post.thumbnailUrl"
+    />
+  </section>
 </template>
 
 <script>
-import ArticleCard from '@/components/ui/ArticleCard'
+import PostPreview from '@/components/Blog/PostPreview'
 export default {
-  components: { ArticleCard },
-  asyncData () {
-    const articles = [
-      {
-        title: 'How to make your articles Vuetiful1',
-        description:
-          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
-        author: {
-          name: 'Naruto Uzumaki',
-          image: 'https://wallpaperaccess.com/full/2866246.jpg'
-        },
-        date: new Date()
-      },
-      {
-        title: 'How to make your articles Vuetiful2',
-        description:
-          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
-        author: {
-          name: 'Naruto Uzumaki',
-          image: 'https://wallpaperaccess.com/full/2866246.jpg'
-        },
-        date: new Date()
-      },
-      {
-        title: 'How to make your articles Vuetiful3',
-        description:
-          'This article guides you through all the steps to make an article shine with your favourite framework, Vue',
-        author: {
-          name: 'Naruto Uzumaki',
-          image: 'https://wallpaperaccess.com/full/2866246.jpg'
-        },
-        date: new Date()
+  components: {
+    PostPreview
+  },
+  asyncData (context) {
+    return context.app.$storyapi.get('cdn/stories', {
+      version: context.isDev ? 'draft' : 'published',
+      starts_with: 'blog/' // fetch multiple elements in folder blog
+    }).then((res) => {
+      return {
+        posts: res.data.stories.map(bp =>
+          ({ id: bp.slug, title: bp.content.title, previewText: bp.content.summary, thumbnailUrl: bp.content.thumbnail.filename }))
       }
-    ]
-
-    return { articles }
+    })
+  },
+  data () {
+    return {
+      posts: [
+        {
+          title: 'A New Beginning',
+          previewText: "This will be awesome, don't miss it!",
+          thumbnailUrl:
+            'http://www.healthyfood.co.uk/wp-content/uploads/2015/01/Cherry-tomato-bocc-olive-basil-pasta.jpg',
+          id: 'a-new-beginning'
+        },
+        {
+          title: 'A Second Beginning',
+          previewText: "This will be awesome, don't miss it!",
+          thumbnailUrl:
+            'http://www.healthyfood.co.uk/wp-content/uploads/2015/01/Cherry-tomato-bocc-olive-basil-pasta.jpg',
+          id: 'a-second-beginning'
+        }
+      ]
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
+#posts {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 35rem) {
+  #posts {
+    flex-direction: row;
+  }
+}
 </style>

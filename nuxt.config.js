@@ -1,3 +1,5 @@
+// eslint-disable-next-line
+// const axios = require('@nuxtjs/axios')
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -14,7 +16,9 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { href: 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap', rel: 'stylesheet' }
     ]
   },
 
@@ -40,12 +44,28 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: process.env.STORYBLOK_KEY,
+        cacheProvider: 'memory'
+      }
+    ]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
+  // Generate dynamic route for ssr
+  // generate: {
+  //   routes () {
+  //     return axios.get(`https://api.storyblok.com/v1/cdn/stories&version=published&token=${process.env.STORYBLOK_KEY}&starts_with=blog&cv=${Math.floor(Date.now() / 1e3)}`)
+  //       .then((res) => {
+  //         const blogPosts = res.data.stories.map(bp => bp.full_slug)
+  //         return ['/', '/blog', '/about', ...blogPosts]
+  //       })
+  //   }
+  // },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
