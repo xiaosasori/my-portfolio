@@ -9,7 +9,14 @@
 </template>
 
 <script>
+import {createSEOMeta} from '@/utils/seo.js'
 export default {
+  head() {
+    return {
+      title: this.title,
+      meta: createSEOMeta({ description: this.content })
+    }
+  },
   asyncData (context) {
     return context.app.$storyapi
       .get('cdn/stories/blog/' + context.params.postId, {
