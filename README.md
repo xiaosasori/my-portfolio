@@ -5,6 +5,7 @@
 - ```extend``` allows you to add your customizations while keeping TailwindCSS defaults
 - Margins and widths are set <b>outside the elements</b>. If you check <i>ArticleCard</i>, it doesn't have any width or margins because it's not its job to know how it's going to be displayed in different places. <i>ArticleCard</i> has its inner dimensions (padding, and separation between inner elements), but how it is displayed is decided in pages/index.vue using the grid classes.
 ## Storyblock with [Nuxt](https://www.storyblok.com/tp/nuxt-js-multilanguage-website-tutorial#connecting-storyblok-with-nuxt-js)
+## Delpoy on [Netlify](https://sad-shaw-405d4f.netlify.app)
 ## Build Setup
 
 ```bash
