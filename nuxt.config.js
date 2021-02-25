@@ -1,4 +1,7 @@
-import { createSEOMeta } from "./utils/seo";
+import { createSEOMeta } from './utils/seo'
+// eslint-disable-next-line
+const hljs = require('highlight.js')
+
 // eslint-disable-next-line
 // const axios = require('@nuxtjs/axios')
 export default {
@@ -15,8 +18,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ...createSEOMeta({
-        description: "Get to know all about Naruto and its characters in tiny bits of info.",
-      }),
+        description: 'Get to know all about Naruto and its characters in tiny bits of info.'
+      })
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -27,6 +30,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    { src: 'prismjs/themes/prism.css', lang: 'css' }
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -54,8 +58,21 @@ export default {
         accessToken: process.env.STORYBLOK_KEY,
         cacheProvider: 'memory'
       }
-    ]
+    ],
+    ['@nuxtjs/markdownit']
   ],
+  markdownit: {
+    preset: 'default',
+    injected: true,
+    linkify: true,
+    breaks: true,
+    html: true,
+    typographer: true,
+    xhtmlOut: true,
+    use: [
+      'markdown-it-prism'
+    ]
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

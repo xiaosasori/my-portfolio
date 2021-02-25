@@ -1,8 +1,5 @@
 <template>
-  <nuxt-link
-    class="block text-gray-800 rounded-lg shadow-lg p-6"
-    :to="`/${slug}`"
-  >
+  <nuxt-link :to="slug" class="block text-gray-800 rounded-lg shadow-lg p-6">
     <header class="text-2xl font-bold">
       {{ title }}
     </header>
@@ -11,9 +8,10 @@
     </p>
     <footer class="flex items-center mt-6">
       <img
+        v-if="author"
         class="w-20 rounded-full border-4 border-main"
-        :src="author.image"
-        :alt="author.name"
+        :src="author.content.avatar.filename"
+        :alt="author.content.name"
       >
       <div class="ml-6">
         <p class="text-xl font-bold">
@@ -26,6 +24,7 @@
     </footer>
   </nuxt-link>
 </template>
+
 <script>
 export default {
   props: {
@@ -37,6 +36,3 @@ export default {
   }
 }
 </script>
-<style>
-
-</style>

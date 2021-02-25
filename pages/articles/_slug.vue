@@ -3,7 +3,7 @@
     <section>
       <div class="container mx-auto px-4">
         <h1 class="text-4xl font-bold">
-          Articles
+          {{ topic.taggings_count }} articles on <i>#{{ topic.name }}</i>
         </h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
           <ArticleCard
@@ -22,22 +22,27 @@
 </template>
 
 <script>
+import kebabCase from 'lodash/kebabCase'
 import ArticleCard from '@/components/ui/ArticleCard'
 export default {
   components: { ArticleCard },
-  async asyncData ({ app }) {
-    const res = await app.$storyapi.get('cdn/stories', {
+  async asyncData ({ app, params }) {
+    // Find tag based on the slug
+    const { data: tagsData } = await app.$storyapi.get('cdn/tags')
+    console.log(tagsData)
+    const topic = tagsData.tags.find(t => kebabCase(t.name) === params.slug)
+    // Fetch articles
+    const { data: articlesData } = await app.$storyapi.get('cdn/stories', {
       starts_with: 'articles/',
-      resolve_relations: 'author'
+      resolve_relations: 'author',
+      with_tag: topic.name
     })
-
-    // Let's convert content.date from a String to a Date
-    const articles = res.data.stories.map((story) => {
+    const articles = articlesData.stories.map((story) => {
       story.content.date = new Date(story.content.date)
       return story
     })
-    // console.log(articles)
-    return { articles }
+
+    return { topic, articles }
   }
 }
 </script>
