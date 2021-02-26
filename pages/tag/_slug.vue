@@ -14,6 +14,7 @@
             :description="article.content.description"
             :author="article.content.author"
             :date="article.content.date.toLocaleDateString()"
+            :tags="article['tag_list']"
           />
         </div>
       </div>
@@ -31,6 +32,8 @@ export default {
     const { data: tagsData } = await app.$storyapi.get('cdn/tags')
     console.log(tagsData)
     const topic = tagsData.tags.find(t => kebabCase(t.name) === params.slug)
+    console.log('topic', topic)
+
     // Fetch articles
     const { data: articlesData } = await app.$storyapi.get('cdn/stories', {
       starts_with: 'articles/',

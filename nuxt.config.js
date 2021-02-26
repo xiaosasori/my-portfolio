@@ -30,6 +30,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    { src: '~/assets/css/tailwind.css', lang: 'css' },
+    { src: '~/assets/css/markdown.css', lang: 'css' },
     { src: 'prismjs/themes/prism.css', lang: 'css' }
   ],
 

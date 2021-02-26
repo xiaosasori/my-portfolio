@@ -14,6 +14,7 @@
             :description="article.content.description"
             :author="article.content.author"
             :date="article.content.date.toLocaleDateString()"
+            :tags="article['tag_list']"
           />
         </div>
       </div>
@@ -36,7 +37,7 @@ export default {
       story.content.date = new Date(story.content.date)
       return story
     })
-    // console.log(articles)
+    console.log(articles)
     return { articles }
   }
 }

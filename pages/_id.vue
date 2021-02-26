@@ -24,14 +24,14 @@
       <nuxt-link
         v-for="tag in article.tag_list"
         :key="tag"
-        :to="`/topics/${tagSlug(tag)}`"
+        :to="`/tag/${tagSlug(tag)}`"
         class="rounded-full text-white bg-main uppercase text-sm mr-2 px-2 py-1"
       >
         {{ tag }}
       </nuxt-link>
     </div>
     <!-- eslint-disable-next-line -->
-    <div class="prose mt-8" v-html="$md.render(article.content.content)" />
+    <div class="markdown-body mt-8" v-html="$md.render(article.content.content)" />
   </div>
 </template>
 

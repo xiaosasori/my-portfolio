@@ -6,13 +6,16 @@
     <p class="mt-4">
       {{ description }}
     </p>
+    <div class="mt-4">
+      <span v-for="tag in tags" :key="tag" class="font-sm rounded-full text-white bg-main uppercase px-2 py-1 mr-2">{{ tag }}</span>
+    </div>
     <footer class="flex items-center mt-6">
-      <img
+      <!-- <img
         v-if="author"
         class="w-20 rounded-full border-4 border-main"
         :src="author.content.avatar.filename"
         :alt="author.content.name"
-      >
+      > -->
       <div class="ml-6">
         <p class="text-xl font-bold">
           {{ author.name }}
@@ -32,7 +35,8 @@ export default {
     slug: String,
     description: String,
     author: Object,
-    date: String
+    date: String,
+    tags: Array
   }
 }
 </script>
