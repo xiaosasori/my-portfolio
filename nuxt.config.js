@@ -1,6 +1,4 @@
 import { createSEOMeta } from './utils/seo'
-// eslint-disable-next-line
-const hljs = require('highlight.js')
 
 // eslint-disable-next-line
 // const axios = require('@nuxtjs/axios')
@@ -18,7 +16,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ...createSEOMeta({
-        description: 'Get to know all about Naruto and its characters in tiny bits of info.'
+        description: 'Personal portfolio.'
       })
     ],
     link: [
@@ -49,7 +47,10 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss'
   ],
-
+  // https://tailwindcss.nuxtjs.org/setup
+  tailwindcss: {
+    jit: true
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
@@ -72,12 +73,13 @@ export default {
     typographer: true,
     xhtmlOut: true,
     use: [
-      'markdown-it-prism'
+      'markdown-it-prism',
+      'markdown-it-anchor'
     ]
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  // axios: {},
   // Generate dynamic route for ssr
   // generate: {
   //   routes () {

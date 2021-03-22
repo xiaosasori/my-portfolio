@@ -1,9 +1,9 @@
 <template>
   <div class="mt-4">
     <section>
-      <div class="container px-4 mx-auto">
-        <h1 class="text-4xl font-bold">
-          {{ topic.taggings_count }} articles on <i>#{{ topic.name }}</i>
+      <div class="px-4 mx-auto max-w-7xl">
+        <h1 class="text-2xl font-bold">
+          My notes
         </h1>
         <div class="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2 lg:grid-cols-3">
           <ArticleCard
@@ -12,7 +12,6 @@
             :slug="`/${article.slug}`"
             :title="article.content.title"
             :description="article.content.description"
-            :author="article.content.author"
             :date="article.content.date.toLocaleDateString()"
             :image="article.content.image.filename"
             :tags="article['tag_list']"
@@ -24,27 +23,21 @@
 </template>
 
 <script>
-import kebabCase from 'lodash/kebabCase'
 import ArticleCard from '@/components/ui/ArticleCard'
 export default {
   components: { ArticleCard },
-  async asyncData ({ app, params }) {
-    // Find tag based on the slug
-    const { data: tagsData } = await app.$storyapi.get('cdn/tags')
-    const topic = tagsData.tags.find(t => kebabCase(t.name) === params.slug)
-
-    // Fetch articles
-    const { data: articlesData } = await app.$storyapi.get('cdn/stories', {
-      starts_with: 'articles/',
-      resolve_relations: 'author',
-      with_tag: topic.name
+  async asyncData ({ app }) {
+    const res = await app.$storyapi.get('cdn/stories/', {
+      starts_with: 'articles/'
     })
-    const articles = articlesData.stories.map((story) => {
+
+    //   // Let's convert content.date from a String to a Date
+    const articles = res.data.stories.map((story) => {
       story.content.date = new Date(story.content.date)
       return story
     })
-
-    return { topic, articles }
+    // console.log(articles)
+    return { articles }
   }
 }
 </script>

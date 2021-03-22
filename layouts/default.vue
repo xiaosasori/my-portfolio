@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader />
-    <main>
+    <main class="antialiased">
       <Nuxt />
     </main>
   </div>

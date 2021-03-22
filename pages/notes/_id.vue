@@ -59,9 +59,6 @@ export default {
       .map(line => ({ text: line.substring(2), link: kebabCase(line.substring(2)) }))
     return { heads, article, author: article.content.author }
   },
-  computed: {
-
-  },
   methods: {
     tagSlug (tag) {
       return kebabCase(tag)
