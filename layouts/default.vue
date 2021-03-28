@@ -1,9 +1,13 @@
 <template>
   <div>
     <AppHeader />
-    <main class="antialiased">
+    <main class="w-11/12 mx-auto antialiased main sm:w-4/5 lg:w-full">
       <Nuxt />
     </main>
+    <footer class="pt-2 pb-4 text-sm text-center text-gray-600">
+      <p>Made with ♥ by Minh Anh</p>
+      <p>© 2021</p>
+    </footer>
   </div>
 </template>
 <script>
@@ -13,18 +17,7 @@ export default {
 }
 </script>
 <style>
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-}
-.main-content {
-  margin-top: 4.5rem;
+.main {
+  /* min-height: calc(100vh - 200px); */
 }
 </style>

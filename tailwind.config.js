@@ -11,7 +11,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        main: colors.teal['500']
+        teal: colors.teal
+      },
+      width: {
+        '30vh': '30vh',
+        '50vh': '50vh'
       }
     }
   },
