@@ -9,14 +9,8 @@
 </template>
 
 <script>
-import {createSEOMeta} from '@/utils/seo.js'
+
 export default {
-  head() {
-    return {
-      title: this.title,
-      meta: createSEOMeta({ description: this.content })
-    }
-  },
   asyncData (context) {
     return context.app.$storyapi
       .get('cdn/stories/blog/' + context.params.postId, {
@@ -30,6 +24,14 @@ export default {
           content: res.data.story.content.content
         }
       })
+  },
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: this.content }
+      ]
+    }
   }
 //   mounted () {
 //     this.$storybridge.init()

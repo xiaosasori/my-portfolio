@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen py-4 bg-gray-100">
+  <div class="min-h-screen pt-4 pb-10 bg-gray-100">
     <div class="container grid gap-4 pt-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" style="width: 80%">
-      <aside class="sticky sm:hidden md:block top-20" style="height: 80vh">
-        <div class="flex flex-col h-full overflow-y-auto">
+      <aside class="sm:hidden md:block">
+        <div class="sticky top-24 flex flex-col overflow-y-auto">
           <nuxt-link :to="$route.path" class="p-2 cursor-pointer hover:bg-gray-200">
             Top
           </nuxt-link>
@@ -28,8 +28,8 @@
           <div class="mt-8 markdown-body" v-html="$md.render(article.content.content)" />
         </div>
       </main>
-      <aside class="sticky max-h-screen top-20 sm:hidden lg:block">
-        <div class="h-10">
+      <aside class="sm:hidden lg:block">
+        <div class="sticky top-24">
           <img src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" alt="ads">
         </div>
       </aside>

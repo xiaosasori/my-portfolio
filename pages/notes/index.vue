@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-4">
-    <section>
+  <div class="mt-8">
+    <section class="pb-8">
       <div class="px-4 mx-auto max-w-7xl">
         <h1 class="text-2xl font-bold">
           My notes

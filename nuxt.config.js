@@ -1,4 +1,3 @@
-import { createSEOMeta } from './utils/seo'
 
 // eslint-disable-next-line
 // const axios = require('@nuxtjs/axios')
@@ -8,16 +7,14 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'my-blog',
+    title: 'Portfolio',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      ...createSEOMeta({
-        description: 'Personal portfolio.'
-      })
+      { hid: 'description', name: 'description', content: 'Personal portfolio' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

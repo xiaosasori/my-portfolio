@@ -1,4 +1,4 @@
-# my-blog
+# my-portfolio
  A blog created with Nuxt, Storyblok and TailwindCSS
 ## Tailwind
 - Tailwind custom [theme](https://tailwindcss.com/docs/theme)
