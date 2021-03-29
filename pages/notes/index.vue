@@ -1,24 +1,19 @@
 <template>
-  <div class="mt-8">
-    <section class="pb-8">
-      <div class="px-4 mx-auto max-w-7xl">
-        <h1 class="text-2xl font-bold">
-          My notes
-        </h1>
-        <div class="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2 lg:grid-cols-3">
-          <ArticleCard
-            v-for="article in articles"
-            :key="article.content.title"
-            :slug="`/${article.slug}`"
-            :title="article.content.title"
-            :description="article.content.description"
-            :date="article.content.date.toLocaleDateString()"
-            :image="article.content.image.filename"
-            :tags="article['tag_list']"
-          />
-        </div>
+  <div class="pt-10 pb-8">
+    <div class="px-4 mx-auto max-w-7xl">
+      <div class="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ArticleCard
+          v-for="article in articles"
+          :key="article.content.title"
+          :slug="`/${article.slug}`"
+          :title="article.content.title"
+          :description="article.content.description"
+          :date="article.content.date.toLocaleDateString()"
+          :image="article.content.image.filename"
+          :tags="article['tag_list']"
+        />
       </div>
-    </section>
+    </div>
   </div>
 </template>
 

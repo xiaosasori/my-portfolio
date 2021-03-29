@@ -41,7 +41,7 @@
     <transition name="header">
       <nav v-show="show" class="absolute left-0 right-0 flex flex-col px-4 pb-4 mt-2 space-y-2 bg-white md:hidden">
         <button v-show="show" aria-label="close" tabindex="-1" class="fixed inset-0 w-full cursor-default" @click="show = false" />
-        <nuxt-link v-for="nav in navs" :key="nav.name" :to="nav.link" class="z-20 px-2 py-2 text-gray-900 transition rounded hover:bg-gray-400 hover:bg-opacity-50">
+        <nuxt-link v-for="nav in navs" :key="nav.name" :to="nav.link" class="z-20 px-2 py-2 text-gray-900 transition rounded hover:bg-gray-400 hover:bg-opacity-50" @click.native="close">
           {{ nav.name }}
         </nuxt-link>
       </nav>
@@ -59,7 +59,6 @@ export default {
         { name: 'Projects', link: '/projects' },
         { name: 'Bookmarks', link: '/bookmarks' },
         { name: 'Notes', link: '/notes' },
-        { name: 'Markdown', link: '/markdown' },
         { name: 'About', link: '/about' }
       ],
       show: false
@@ -67,7 +66,6 @@ export default {
   },
   methods: {
     close () {
-      console.log('change')
       this.show = false
     },
     async fetchSuggestions (searchInput) {

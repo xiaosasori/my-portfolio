@@ -1,20 +1,18 @@
 
-// eslint-disable-next-line
-// const axios = require('@nuxtjs/axios')
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Portfolio',
+    title: 'Minh Anh',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Personal portfolio' }
+      { hid: 'description', name: 'description', content: 'Minh Anh is a software engineer who specializes in building web app with Vue. He\'s based in Osaka, Japan' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -32,6 +30,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/prism-nuxt.js' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -63,12 +62,8 @@ export default {
   ],
   markdownit: {
     preset: 'default',
-    injected: true,
     linkify: true,
     breaks: true,
-    html: true,
-    typographer: true,
-    xhtmlOut: true,
     use: [
       'markdown-it-prism',
       'markdown-it-anchor'

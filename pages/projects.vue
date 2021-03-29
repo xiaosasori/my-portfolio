@@ -1,6 +1,6 @@
 <template>
-  <div class="dark max-w-5xl pt-10 pb-8 mx-auto lg:w-4/5">
-    <h2 class="text-3xl dark:text-green-500 font-bold text-center text-gray-900">
+  <div class="max-w-5xl pt-10 pb-8 mx-auto dark lg:w-4/5">
+    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-green-500">
       Some Things I've Built
     </h2>
     <ul class="mt-10 space-y-8 lg:space-y-24">
@@ -12,14 +12,14 @@
             </div>
           </div>
         </div>
-        <div style="grid-row: 1 / 1" class="z-10 flex flex-col justify-center p-8 rounded bg-gray-900 bg-opacity-80 lg:bg-transparent text-white lg:p-0 lg:text-gray-900 pj-right" :class="[index % 2 === 0 ? 'lg:text-right' : 'lg:text-left']">
+        <div style="grid-row: 1 / 1" class="z-10 flex flex-col justify-center p-8 text-white bg-gray-900 rounded bg-opacity-80 lg:bg-transparent lg:p-0 lg:text-gray-900 pj-right" :class="[index % 2 === 0 ? 'lg:text-right' : 'lg:text-left']">
           <p class="text-sm font-semibold">
             Feature Project
           </p>
           <h3 class="text-lg font-semibold">
             {{ project.name }}
           </h3>
-          <div class="p-4 mt-4 lg:bg-white border rounded lg:border-gray-900">
+          <div class="p-4 mt-4 border rounded lg:bg-white lg:border-gray-900">
             <p>{{ project.description }}</p>
           </div>
           <div class="mt-4 space-x-4 lg:text-gray-900">
@@ -27,23 +27,23 @@
           </div>
           <div class="mt-4 space-x-3">
             <a
-              class="inline-block"
+              class="inline-block hover:text-purple-500"
               target="_blank"
               :href="project.git"
               rel="noopener noreferrer"
               title="Github"
-              name="Github"
             >
+              <span class="sr-only">Github</span>
               <svg class="w-6 h-6" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg>
             </a>
             <a
-              class="inline-block"
+              class="inline-block hover:text-purple-500"
               target="_blank"
               :href="project.link"
               rel="noopener noreferrer"
               title="Demo"
-              name="Demo"
             >
+              <span class="sr-only">Demo</span>
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
             </a>
           </div>
@@ -56,7 +56,7 @@
         Other Noteworthy Projects
       </h2>
       <ul class="grid grid-cols-1 gap-4 mt-10 md:grid-cols-2 lg:grid-cols-3">
-        <li v-for="other in others" :key="other.name" class="px-4 py-6 space-y-4 transition ease-out border border-gray-900 rounded shadow-lg transform hover:-translate-y-2">
+        <li v-for="other in others" :key="other.name" class="px-4 py-6 space-y-4 transition ease-out transform border border-gray-900 rounded shadow-lg hover:-translate-y-2">
           <div class="flex items-center justify-between">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
             <div class="flex items-center space-x-3">
@@ -66,10 +66,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Github"
-                name="Github"
                 class="transition-colors duration-200 lg:block hover:text-purple-500"
               >
-                <span class="sr-only">Project on Github</span>
+                <span class="sr-only">Github</span>
                 <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
                   <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
                 </svg>
@@ -80,7 +79,6 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Demo"
-                name="Demo"
                 class="transition-colors duration-200 lg:block hover:text-purple-500"
               >
                 <span class="sr-only">Demo</span>
@@ -90,9 +88,9 @@
               </a>
             </div>
           </div>
-          <h3 class="text-lg font-semibold">
+          <a :href="other.link" target="_blank" title="Demo" rel="noopener noreferrer" class="block text-lg font-semibold hover:text-purple-600">
             {{ other.name }}
-          </h3>
+          </a>
           <p class="">
             {{ other.description }}
           </p>
@@ -152,10 +150,10 @@ export default {
         },
         {
           name: 'Markdown Preview',
-          description: 'Find out how we built a custom headless CMS with Node, Express, and Firebase',
-          techs: ['Node', 'Firebase', 'Vue'],
-          git: 'https://github.com/xiaosasori',
-          link: ''
+          description: 'Online Github-like Markdown Preview ',
+          techs: ['Nuxt.js', 'Github Actions', 'Markdown It'],
+          git: 'https://github.com/xiaosasori/markdown-preview',
+          link: 'https://xiaosasori.github.io/markdown-preview/'
         },
         {
           name: 'Simple Chat',
