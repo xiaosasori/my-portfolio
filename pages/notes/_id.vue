@@ -1,17 +1,17 @@
 <template>
-  <div class="min-h-screen pt-4 pb-10 bg-gray-100">
+  <div class="min-h-screen pt-4 pb-10 dark:bg-bdark bg-gray-100">
     <div class="container grid gap-4 pt-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" style="width: 80%">
       <aside class="sm:hidden md:block">
-        <div class="sticky top-24 flex flex-col overflow-y-auto">
-          <nuxt-link :to="$route.path" class="p-2 cursor-pointer hover:bg-gray-200">
+        <div class="sticky dark:text-gray-300 top-24 flex flex-col overflow-y-auto">
+          <nuxt-link :to="$route.path" class="p-2 cursor-pointer dark:hover:bg-blue-900 hover:bg-gray-200">
             Top
           </nuxt-link>
-          <a v-for="head in heads" :key="head.link" :href="`#${head.link}`" class="p-2 cursor-pointer hover:bg-gray-200">
+          <a v-for="head in heads" :key="head.link" :href="`#${head.link}`" class="dark:hover:bg-blue-900 p-2 cursor-pointer hover:bg-gray-200">
             {{ head.text }}
           </a>
         </div>
       </aside>
-      <main class="col-span-3 space-y-4 bg-white">
+      <main class="col-span-3 space-y-4 dark:bg-bdark-light bg-white">
         <img class="rounded" :src="article.content.image.filename" alt="golang">
         <div class="px-6 py-3">
           <div class="flex mt-4 space-x-2">
@@ -19,13 +19,13 @@
               v-for="tag in article.tag_list"
               :key="tag"
               :to="`/tag/${tagSlug(tag)}`"
-              class="px-2 py-1 text-sm text-white uppercase rounded-full bg-main"
+              class="px-2 py-1 text-sm text-white uppercase rounded-full dark:border dark:border-gray-300"
             >
               {{ tag }}
             </nuxt-link>
           </div>
           <!-- eslint-disable-next-line -->
-          <div class="mt-8 markdown-body" v-html="$md.render(article.content.content)" />
+          <div class="mt-8 markdown-body dark:text-gray-300" v-html="$md.render(article.content.content)" />
         </div>
       </main>
       <aside class="sm:hidden lg:block">

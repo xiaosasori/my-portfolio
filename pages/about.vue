@@ -1,12 +1,12 @@
 <template>
-  <div class="pt-4 pb-8">
-    <div class="mx-auto mt-10 lg:w-3/4 xl:w-1/2" style="box-shadow: 0 1rem 2rem rgba(0,0,0,.4);">
+  <div class="pt-4 pb-8 mx-auto lg:w-4/5 w-11/12 sm:w-4/5 max-w-5xl">
+    <div class="mt-10" style="box-shadow: 0 1rem 2rem rgba(0,0,0,.4);">
       <div class="flex px-4 py-3 space-x-2 bg-gray-400 rounded-t-lg bg-opacity-60">
         <span class="block w-4 h-4 bg-red-400 rounded-full" />
         <span class="block w-4 h-4 bg-yellow-500 rounded-full" />
         <span class="block w-4 h-4 bg-green-500 rounded-full" />
       </div>
-      <div class="px-10 py-12 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
+      <div class="md:px-10 md:py-12 px-4 py-6 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
         <p>
           <span class="text-purple-400">minhanh $</span>
           <span class="text-white">cat minhanh</span>
@@ -18,7 +18,7 @@
         <p class="text-white">
           <br>
           Hello! I'm Minh Anh, a fullstack developer from Vietnam. <br><br>
-          I love creating web components with <span class="font-semibold vue">Vue</span>, and I'm currently studying Golang.
+          I love creating UI components with <span class="font-semibold vue">Vue</span>, and I'm currently studying Golang.
           My core skill is based on JavaScript and I love to do most of the things using JavaScript.<br><br>
           I have graduated with a bachelor's degree in Software Engineering from FPT University at Hanoi, Vietnam in 2019. <br><br>
           I am currently living in Japan and available for any kind of job opportunity that suits my interests.
@@ -26,13 +26,13 @@
       </div>
     </div>
     <!--  -->
-    <div class="mx-auto mt-16 lg:w-3/4 xl:w-1/2" style="box-shadow: 0 1rem 2rem rgba(0,0,0,.4);">
+    <div class="mt-16 " style="box-shadow: 0 1rem 2rem rgba(0,0,0,.4);">
       <div class="flex px-4 py-3 space-x-2 bg-gray-400 rounded-t-lg bg-opacity-60">
         <span class="block w-4 h-4 bg-red-400 rounded-full" />
         <span class="block w-4 h-4 bg-yellow-500 rounded-full" />
         <span class="block w-4 h-4 bg-green-500 rounded-full" />
       </div>
-      <div class="px-10 py-12 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
+      <div class="md:px-10 md:py-12 px-4 py-6 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
         <p>
           <span class="text-purple-400">minhanh $</span>
           <span class="text-white">cat skills/tools</span>
@@ -78,13 +78,13 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto mt-16 lg:w-3/4 xl:w-1/2" style="box-shadow: 0 1rem 2rem rgba(0,0,0,.4);">
+    <div class="mt-16" style="box-shadow: 0 1rem 2rem rgba(0,0,0,.4);">
       <div class="flex px-4 py-3 space-x-2 bg-gray-400 rounded-t-lg bg-opacity-60">
         <span class="block w-4 h-4 bg-red-400 rounded-full" />
         <span class="block w-4 h-4 bg-yellow-500 rounded-full" />
         <span class="block w-4 h-4 bg-green-500 rounded-full" />
       </div>
-      <div class="px-10 py-12 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
+      <div class="md:px-10 md:py-12 px-4 py-6 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
         <p>
           <span class="text-purple-400">minhanh $</span>
           <span class="text-white">cd hobbies/interests</span>

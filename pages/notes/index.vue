@@ -1,6 +1,6 @@
 <template>
   <div class="pt-10 pb-8">
-    <div class="px-4 mx-auto max-w-7xl">
+    <div class="px-8 md:px-20 mx-auto max-w-7xl">
       <div class="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2 lg:grid-cols-3">
         <ArticleCard
           v-for="article in articles"
