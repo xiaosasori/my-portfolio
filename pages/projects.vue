@@ -135,13 +135,6 @@ export default {
       ],
       others: [
         {
-          name: 'Vue Ecommerce Demo',
-          description: 'A simple ecommerce app',
-          techs: ['Vue.js', 'Firebase'],
-          git: 'https://github.com/xiaosasori/vue-shop',
-          link: ''
-        },
-        {
           name: 'Markdown Preview',
           description: 'Online Github-like Markdown Preview ',
           techs: ['Nuxt.js', 'Github Actions', 'Markdown It'],
@@ -152,6 +145,13 @@ export default {
           name: 'Simple Chat',
           description: 'A simple Google Keep clone built with Vue and Firebase',
           techs: ['Vue.js', 'Go'],
+          git: 'https://github.com/xiaosasori',
+          link: 'https://github.com/xiaosasori'
+        },
+        {
+          name: 'Vue Forum',
+          description: 'Realworld forum application.',
+          techs: ['Vue.js', 'Firebase'],
           git: 'https://github.com/xiaosasori',
           link: 'https://github.com/xiaosasori'
         },
@@ -168,6 +168,13 @@ export default {
           techs: ['Vue.js', 'Vuetify', 'Apollo GraphQL', 'MongoDB'],
           git: 'https://github.com/xiaosasori',
           link: 'https://github.com/xiaosasori'
+        },
+        {
+          name: 'Vue Ecommerce Demo',
+          description: 'A simple ecommerce app',
+          techs: ['Vue.js', 'Firebase'],
+          git: 'https://github.com/xiaosasori/vue-shop',
+          link: ''
         }
       ]
     }
