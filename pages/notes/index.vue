@@ -1,6 +1,6 @@
 <template>
   <div class="pt-10 pb-8">
-    <div class="px-8 md:px-20 mx-auto max-w-7xl">
+    <div class="px-8 mx-auto md:px-20 max-w-7xl">
       <div class="grid grid-cols-1 gap-8 mt-4 sm:grid-cols-2 lg:grid-cols-3">
         <ArticleCard
           v-for="article in articles"
@@ -11,6 +11,7 @@
           :date="article.content.date.toLocaleDateString()"
           :image="article.content.image.filename"
           :tags="article['tag_list']"
+          class="card-note"
         />
       </div>
     </div>
@@ -19,6 +20,7 @@
 
 <script>
 import ArticleCard from '@/components/ui/ArticleCard'
+import gsap from 'gsap'
 export default {
   components: { ArticleCard },
   async asyncData ({ app }) {
@@ -33,6 +35,20 @@ export default {
     })
     // console.log(articles)
     return { articles }
+  },
+  mounted () {
+    gsap.from('.card-note', {
+      duration: 0.5,
+      opacity: 0,
+      scale: 0,
+      y: 200,
+      ease: 'power1',
+      stagger: 0.5
+      // stagger: {
+      //   each: 0.5,
+      //   from: 'edges' // outside to center; 'center' for inverting animation
+      // }
+    })
   }
 }
 </script>

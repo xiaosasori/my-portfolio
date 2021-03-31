@@ -1,10 +1,10 @@
 <template>
-  <div class="max-w-5xl pt-10 pb-8 mx-auto lg:w-4/5 w-11/12 sm:w-4/5">
+  <div class="w-11/12 max-w-5xl pt-10 pb-8 mx-auto lg:w-4/5 sm:w-4/5">
     <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-gray-300">
       Some Things I've Built
     </h2>
     <ul class="mt-10 space-y-8 lg:space-y-24">
-      <li v-for="(project, index) in projects" :key="project.name" class="fade-in grid grid-cols-12 pj">
+      <li v-for="(project, index) in projects" :key="project.name" class="grid grid-cols-12 fade-in pj">
         <div class="relative pj-left" style="grid-row: 1 / 1">
           <div style="padding-bottom:62.2857%">
             <div class="absolute inset-0 overflow-hidden rounded-lg">
@@ -12,17 +12,17 @@
             </div>
           </div>
         </div>
-        <div style="grid-row: 1 / 1" class="flex flex-col z-10 md:z-0 justify-center p-8 text-white dark:text-gray-300 bg-gray-900 rounded bg-opacity-90 md:bg-transparent md:p-0 md:text-gray-900 pj-right" :class="[index % 2 === 0 ? 'md:text-right' : 'md:text-left']">
+        <div style="grid-row: 1 / 1" class="z-10 flex flex-col justify-center p-8 text-white bg-gray-900 rounded md:z-0 dark:text-gray-300 bg-opacity-90 md:bg-transparent md:p-0 md:text-gray-900 pj-right" :class="[index % 2 === 0 ? 'md:text-right' : 'md:text-left']">
           <p class="text-sm font-semibold dark:text-tdark">
             Feature Project
           </p>
           <h3 class="text-lg font-semibold">
             {{ project.name }}
           </h3>
-          <div class="p-4 mt-4 border z-10 rounded dark:md:bg-bdark-light dark:md:border-none md:bg-white md:border-gray-900">
+          <div class="z-10 p-4 mt-4 border rounded dark:md:bg-bdark-light dark:md:border-none md:bg-white md:border-gray-900">
             <p>{{ project.description }}</p>
           </div>
-          <div class="mt-4 space-x-4 lg:text-gray-900 font-light dark:text-gray-300">
+          <div class="mt-4 space-x-4 font-light lg:text-gray-900 dark:text-gray-300">
             <span v-for="tech in project.techs" :key="tech">{{ tech }}</span>
           </div>
           <div class="mt-4 space-x-3">
@@ -52,13 +52,13 @@
     </ul>
     <!-- archive -->
     <div class="mt-14">
-      <h2 class="dark:text-gray-300 text-3xl font-semibold text-center">
+      <h2 class="text-3xl font-semibold text-center dark:text-gray-300">
         Other Noteworthy Projects
       </h2>
       <ul class="grid grid-cols-1 gap-4 mt-10 md:grid-cols-2 lg:grid-cols-3">
-        <li v-for="other in others" :key="other.name" class="dark:text-gray-300 px-4 py-6 space-y-4 dark:bg-bdark-light transition ease-out transform border border-gray-900 rounded shadow-lg hover:-translate-y-2">
+        <li v-for="other in others" :key="other.name" class="px-4 py-6 space-y-4 transition ease-out transform border border-gray-900 rounded shadow-lg dark:text-gray-300 dark:bg-bdark-light hover:-translate-y-2">
           <div class="flex items-center justify-between">
-            <svg class="dark:text-tdark w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+            <svg class="w-6 h-6 dark:text-tdark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
             <div class="flex items-center space-x-3">
               <a
                 v-if="other.git"
@@ -128,8 +128,8 @@ export default {
           name: 'Tailwind Templates',
           description: 'A collection of fully responsive HTML components and templates built with Tailwind CSS',
           techs: ['Nuxt.js', 'TailwindCSS'],
-          image: 'https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="nature',
-          git: 'https://github.com/xiaosasori',
+          image: '/templates.png',
+          git: 'https://github.com/xiaosasori/nuxt-tailwind',
           link: 'https://github.com/xiaosasori'
         }
       ],

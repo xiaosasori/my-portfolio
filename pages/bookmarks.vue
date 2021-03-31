@@ -1,38 +1,38 @@
 <template>
-  <div class="min-h-screen py-4 bg-gray-100">
+  <div class="min-h-screen py-4 bg-gray-100 dark:bg-bdark">
     <div class="container grid gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" style="width: 80%">
-      <aside class="sticky sm:hidden md:block top-20" style="height: 80vh">
+      <aside class="sticky sm:hidden md:block top-24 dark:text-gray-300" style="height: 80vh">
         <h2 class="p-2 font-bold">
           Tags
         </h2>
-        <div class="flex flex-col h-full overflow-y-auto">
-          <p class="p-2 cursor-pointer hover:bg-gray-200" @click="setFilter('')">
+        <div class="flex flex-col h-full overflow-y-auto" style="max-height: calc(100vh - 254px)">
+          <p class="p-2 cursor-pointer dark:hover:text-tdark hover:bg-gray-200" @click="setFilter('')">
             #all
           </p>
-          <p v-for="tag in tags" :key="tag.name" class="p-2 cursor-pointer hover:bg-gray-200" :class="{'bg-gray-300': filterBy === tag}" @click="setFilter(tag.name)">
+          <p v-for="tag in tags" :key="tag.name" class="p-2 cursor-pointer dark:hover:text-tdark hover:bg-transparent hover:bg-gray-200" :class="{'bg-gray-300': filterBy === tag}" @click="setFilter(tag.name)">
             #{{ tag.name }} ({{ tag['taggings_count'] }})
           </p>
         </div>
       </aside>
       <main class="col-span-3 mt-2 space-y-4">
-        <a v-for="article in list" :key="article.content.title" :href="article.content.url" class="flex px-6 py-4 space-x-2 bg-white border border-gray-200 rounded">
+        <a v-for="article in list" :key="article.content.title" :href="article.content.url" class="flex px-6 py-4 space-x-2 bg-white border border-gray-200 rounded dark:border-blue-900 dark:bg-bdark-light">
           <div class="flex-grow">
-            <div class="flex justify-between space-x-3 items-center">
-              <h1 class="text-xl font-bold">
+            <div class="flex items-center justify-between space-x-3">
+              <h1 class="text-xl font-bold dark:text-gray-100">
                 {{ article.content.title }}
               </h1>
-              <p class="text-sm text-gray-500">
+              <p class="text-sm text-gray-500 dark:text-gray-300">
                 {{ article.content['published_at'].toLocaleDateString() }}
               </p>
             </div>
-            <p class="flex mt-2 space-x-2 text-sm text-gray-500">
+            <p class="flex mt-2 space-x-2 text-sm text-gray-500 dark:text-gray-300">
               <span v-for="tag in article['tag_list']" :key="tag">#{{ tag }}</span>
             </p>
           </div>
         </a>
       </main>
-      <aside class="sticky h-screen p-2 top-20 sm:hidden lg:block">
-        <div class="h-10">
+      <aside class="p-2 sm:hidden lg:block">
+        <div class="sticky top-24">
           <img src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" alt="ads">
         </div>
       </aside>

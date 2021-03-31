@@ -1,12 +1,12 @@
 <template>
-  <div class="pt-4 pb-8 mx-auto lg:w-4/5 w-11/12 sm:w-4/5 max-w-5xl">
+  <div class="w-11/12 max-w-5xl pt-4 pb-8 mx-auto lg:w-4/5 sm:w-4/5">
     <div class="mt-10" style="box-shadow: 0 1rem 2rem rgba(0,0,0,.4);">
       <div class="flex px-4 py-3 space-x-2 bg-gray-400 rounded-t-lg bg-opacity-60">
         <span class="block w-4 h-4 bg-red-400 rounded-full" />
         <span class="block w-4 h-4 bg-yellow-500 rounded-full" />
         <span class="block w-4 h-4 bg-green-500 rounded-full" />
       </div>
-      <div class="md:px-10 md:py-12 px-4 py-6 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
+      <div class="px-4 py-6 text-2xl bg-gray-800 md:px-10 md:py-12" style="font-family: 'Courier New',Courier,monospace">
         <p>
           <span class="text-purple-400">minhanh $</span>
           <span class="text-white">cat minhanh</span>
@@ -32,7 +32,7 @@
         <span class="block w-4 h-4 bg-yellow-500 rounded-full" />
         <span class="block w-4 h-4 bg-green-500 rounded-full" />
       </div>
-      <div class="md:px-10 md:py-12 px-4 py-6 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
+      <div class="px-4 py-6 text-2xl bg-gray-800 md:px-10 md:py-12" style="font-family: 'Courier New',Courier,monospace">
         <p>
           <span class="text-purple-400">minhanh $</span>
           <span class="text-white">cat skills/tools</span>
@@ -84,7 +84,7 @@
         <span class="block w-4 h-4 bg-yellow-500 rounded-full" />
         <span class="block w-4 h-4 bg-green-500 rounded-full" />
       </div>
-      <div class="md:px-10 md:py-12 px-4 py-6 text-2xl bg-gray-800" style="font-family: 'Courier New',Courier,monospace">
+      <div class="px-4 py-6 text-2xl bg-gray-800 md:px-10 md:py-12" style="font-family: 'Courier New',Courier,monospace">
         <p>
           <span class="text-purple-400">minhanh $</span>
           <span class="text-white">cd hobbies/interests</span>
@@ -96,9 +96,9 @@
         </p>
         <p class="text-white">
           <br>
-          📖chinese novel (修仙)
+          📖 chinese novel (修仙)
           <br><br>
-          📿buddha stories
+          📿 buddha stories
         </p>
       </div>
     </div>
