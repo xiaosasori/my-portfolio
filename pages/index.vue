@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center lg:space-x-12 lg:flex-row lg:mx-auto" style="min-height: 80vh">
     <!-- left -->
-    <img class="block rounded-full shadow-2xl w-30vh lg:w-50vh" src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80" alt="avatar">
+    <img class="block rounded-full shadow-2xl w-30vh lg:w-50vh" src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=451&h=451&q=80" alt="avatar">
     <!-- <img class="block rounded-full shadow-2xl w-30vh lg:w-50vh" src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.6435-9/80818896_2866608610120833_193228091860975616_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=5uWOvujFmB0AX8DanVW&_nc_oc=AQl2snZIJH2eQuM_l68AaKVHGajv3fkWbQArm0HHvgEsmMlsCPTBWLj9zCc1elOl9xs&_nc_ht=scontent-nrt1-1.xx&oh=7cf5e1ff16bb011daf16fc75da83536e&oe=608A7056" alt="avatar"> -->
     <!-- <img class="block rounded-full shadow-2xl w-30vh lg:w-50vh" src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=256&h=256&q=80" alt="avatar"> -->
     <!-- right -->

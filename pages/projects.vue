@@ -88,10 +88,10 @@
               </a>
             </div>
           </div>
-          <a :href="other.link" target="_blank" title="Demo" rel="noopener noreferrer" class="block text-lg font-semibold transition-colors duration-200 dark:hover:text-tdark hover:text-purple-600">
+          <a :href="other.git" target="_blank" title="Demo" rel="noopener noreferrer" class="block text-lg font-semibold transition-colors duration-200 dark:hover:text-tdark hover:text-purple-600">
             {{ other.name }}
           </a>
-          <p class="">
+          <p>
             {{ other.description }}
           </p>
           <div class="space-x-4 font-light">
