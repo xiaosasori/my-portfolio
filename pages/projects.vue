@@ -4,7 +4,7 @@
       Some Things I've Built
     </h2>
     <ul class="mt-10 space-y-8 lg:space-y-24">
-      <li v-for="(project, index) in projects" :key="project.name" class="grid grid-cols-12 fade-in pj">
+      <li v-for="(project, index) in projects" :key="project.name" class="grid grid-cols-12 pj">
         <div class="relative pj-left" style="grid-row: 1 / 1">
           <div style="padding-bottom:62.2857%">
             <div class="absolute inset-0 overflow-hidden rounded-lg">
@@ -130,44 +130,44 @@ export default {
           techs: ['Nuxt.js', 'TailwindCSS'],
           image: '/templates.png',
           git: 'https://github.com/xiaosasori/nuxt-tailwind',
-          link: 'https://github.com/xiaosasori'
+          link: 'https://xiaosasori.github.io/nuxt-tailwind/'
         }
       ],
       others: [
         {
           name: 'Markdown Preview',
-          description: 'Online Github-like Markdown Preview ',
+          description: 'Online github-like Markdown Preview ',
           techs: ['Nuxt.js', 'Github Actions', 'Markdown It'],
           git: 'https://github.com/xiaosasori/markdown-preview',
           link: 'https://xiaosasori.github.io/markdown-preview/'
         },
         {
           name: 'Simple Chat',
-          description: 'A simple Google Keep clone built with Vue and Firebase',
+          description: 'A simple chat app with Go',
           techs: ['Vue.js', 'Go'],
-          git: 'https://github.com/xiaosasori',
-          link: 'https://github.com/xiaosasori'
+          git: 'https://github.com/xiaosasori/go-vue-chat',
+          link: ''
         },
         {
           name: 'Vue Forum',
           description: 'Realworld forum application.',
           techs: ['Vue.js', 'Firebase'],
-          git: 'https://github.com/xiaosasori',
-          link: 'https://github.com/xiaosasori'
+          git: 'https://github.com/xiaosasori/vue-forum',
+          link: 'https://vue-forum-1e7a0.web.app'
         },
         {
           name: 'Batah',
           description: 'My capstone project. A system connects the lessee and the lessor as offices or coworking space from which to create a completely new ecosystem.',
           techs: ['Apollo GraphQL', 'Vue.js', 'Google Map Api', 'Paypal', 'MongoDB'],
-          git: 'https://github.com/xiaosasori',
-          link: 'https://github.com/xiaosasori'
+          git: 'https://github.com/xiaosasori/batah',
+          link: 'http://batah-client.herokuapp.com/'
         },
         {
           name: 'VueVue',
           description: 'Simple image-sharing social application similar to Pinterest or Instagram. Authenticated users will be able to like and unlike, share, comment on, search for, edit, and delete image-related posts.',
           techs: ['Vue.js', 'Vuetify', 'Apollo GraphQL', 'MongoDB'],
-          git: 'https://github.com/xiaosasori',
-          link: 'https://github.com/xiaosasori'
+          git: 'https://github.com/xiaosasori/vuevue',
+          link: ''
         },
         {
           name: 'Vue Ecommerce Demo',

@@ -20,7 +20,7 @@
 
 <script>
 import ArticleCard from '@/components/ui/ArticleCard'
-import gsap from 'gsap'
+// import gsap from 'gsap'
 export default {
   components: { ArticleCard },
   async asyncData ({ app }) {
@@ -35,20 +35,20 @@ export default {
     })
     // console.log(articles)
     return { articles }
-  },
-  mounted () {
-    gsap.from('.card-note', {
-      duration: 0.5,
-      opacity: 0,
-      scale: 0,
-      y: 200,
-      ease: 'power1',
-      stagger: 0.5
-      // stagger: {
-      //   each: 0.5,
-      //   from: 'edges' // outside to center; 'center' for inverting animation
-      // }
-    })
   }
+  // mounted () {
+  // gsap.from('.card-note', {
+  //   duration: 0.4,
+  //   opacity: 0,
+  //   scale: 0.5,
+  //   y: 200,
+  //   ease: 'power0',
+  //   stagger: 0.25
+  // stagger: {
+  //   each: 0.5,
+  //   from: 'edges' // outside to center; 'center' for inverting animation
+  // }
+  // })
+  // }
 }
 </script>

@@ -15,7 +15,14 @@
         </div>
       </aside>
       <main class="col-span-3 mt-2 space-y-4">
-        <a v-for="article in list" :key="article.content.title" :href="article.content.url" class="flex px-6 py-4 space-x-2 bg-white border border-gray-200 rounded dark:border-blue-900 dark:bg-bdark-light">
+        <a
+          v-for="article in list"
+          :key="article.content.title"
+          :href="article.content.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex px-6 py-4 space-x-2 bg-white border border-gray-200 rounded dark:border-blue-900 dark:bg-bdark-light"
+        >
           <div class="flex-grow">
             <div class="flex items-center justify-between space-x-3">
               <h1 class="text-xl font-bold dark:text-gray-100">
@@ -32,9 +39,9 @@
         </a>
       </main>
       <aside class="p-2 sm:hidden lg:block">
-        <div class="sticky top-24">
-          <img src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" alt="ads">
-        </div>
+        <a href="https://youtu.be/7s6OHfdX9hA" target="_blank" rel="noopener noreferrer" class="block sticky top-24">
+          <img src="/batchanhdao.jpeg" alt="The Noble Eightfold Path">
+        </a>
       </aside>
     </div>
   </div>
