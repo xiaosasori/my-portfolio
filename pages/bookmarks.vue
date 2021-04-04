@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen py-4 bg-gray-100 dark:bg-bdark">
-    <div class="container grid gap-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5" style="width: 80%">
-      <aside class="sticky sm:hidden md:block top-24 dark:text-gray-300" style="height: 80vh">
+    <div class="container grid gap-2 mx-auto sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5" style="width: 80%">
+      <aside class="sticky hidden sm:block top-24 dark:text-gray-300" style="height: 80vh">
         <h2 class="p-2 font-bold">
           Tags
         </h2>
@@ -14,7 +14,7 @@
           </p>
         </div>
       </aside>
-      <main class="col-span-3 mt-2 space-y-4">
+      <main class="mt-2 space-y-4 sm:col-span-2 lg:col-span-3">
         <a
           v-for="article in list"
           :key="article.content.title"
@@ -24,11 +24,11 @@
           class="flex px-6 py-4 space-x-2 bg-white border border-gray-200 rounded dark:border-blue-900 dark:bg-bdark-light"
         >
           <div class="flex-grow">
-            <div class="flex items-center justify-between space-x-3">
+            <div class="flex flex-col sm:items-center sm:justify-between sm:space-x-3 sm:flex-row">
               <h1 class="text-xl font-bold dark:text-gray-100">
                 {{ article.content.title }}
               </h1>
-              <p class="text-sm text-gray-500 dark:text-gray-300">
+              <p class="mt-1 mr-auto text-sm text-gray-500 sm:mt-0 sm:mr-0 dark:text-gray-300">
                 {{ article.content['published_at'].toLocaleDateString() }}
               </p>
             </div>
@@ -38,8 +38,8 @@
           </div>
         </a>
       </main>
-      <aside class="p-2 sm:hidden lg:block">
-        <a href="https://youtu.be/7s6OHfdX9hA" target="_blank" rel="noopener noreferrer" class="block sticky top-24">
+      <aside class="hidden p-2 md:block">
+        <a href="https://youtu.be/7s6OHfdX9hA" target="_blank" rel="noopener noreferrer" class="sticky block top-24">
           <img src="/batchanhdao.jpeg" alt="The Noble Eightfold Path">
         </a>
       </aside>

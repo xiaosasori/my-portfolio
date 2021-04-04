@@ -20,7 +20,7 @@
 
 <script>
 import ArticleCard from '@/components/ui/ArticleCard'
-// import gsap from 'gsap'
+
 export default {
   components: { ArticleCard },
   async asyncData ({ app }) {
@@ -28,12 +28,11 @@ export default {
       starts_with: 'articles/'
     })
 
-    //   // Let's convert content.date from a String to a Date
+    // Let's convert content.date from a String to a Date
     const articles = res.data.stories.map((story) => {
       story.content.date = new Date(story.content.date)
       return story
     })
-    // console.log(articles)
     return { articles }
   }
   // mounted () {
