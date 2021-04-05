@@ -35,7 +35,7 @@
       <div class="px-4 py-6 text-2xl bg-gray-800 md:px-10 md:py-12" style="font-family: 'Courier New',Courier,monospace">
         <p>
           <span class="text-purple-400">minhanh $</span>
-          <span class="text-white">cat skills/tools</span>
+          <span class="text-white">cd skills/tools</span>
         </p><br>
         <p>
           <span class="text-purple-400">skills/tools </span>

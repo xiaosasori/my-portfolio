@@ -131,7 +131,7 @@ export default {
           techs: ['Nuxt.js', 'TailwindCSS'],
           image: '/templates.png',
           git: 'https://github.com/xiaosasori/nuxt-tailwind',
-          link: 'https://xiaosasori.github.io/nuxt-tailwind/'
+          link: 'https://xiaosasori.github.io/nuxt-tailwind//coca'
         }
       ],
       others: [
@@ -161,7 +161,7 @@ export default {
           description: 'My capstone project. A system connects the lessee and the lessor as offices or coworking space from which to create a completely new ecosystem.',
           techs: ['Apollo GraphQL', 'Vue.js', 'Google Map Api', 'Paypal', 'MongoDB'],
           git: 'https://github.com/xiaosasori/batah',
-          link: 'http://batah-client.herokuapp.com/'
+          link: ''
         },
         {
           name: 'VueVue',
