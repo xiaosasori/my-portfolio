@@ -18,7 +18,7 @@
         <p class="text-white">
           <br>
           Hello! I'm Minh Anh, a fullstack developer from Vietnam. <br><br>
-          I love creating UI components with <span class="font-semibold vue">Vue</span>, and I'm currently studying Golang.
+          I love creating UI components with <span class="font-semibold vue">Vue</span>.
           My core skill is based on JavaScript and I love to do most of the things using JavaScript.<br><br>
           I have graduated with a bachelor's degree (GPA 8.3/10) in Software Engineering from FPT University at Hanoi, Vietnam in 2019. <br><br>
           I am currently living in Japan and available for any kind of job opportunity that suits my interests.

@@ -110,12 +110,12 @@ export default {
     return {
       projects: [
         {
-          name: 'NuxtBnb (WIP)',
-          description: 'A fully functional AirBnb clone powered by Nuxt.js. Covering the basics and advanced concepts like working with Maps API, accepting payments via Credit Cards, implementing date pickers, advanced search functionality, and many more!',
-          techs: ['Nuxt.js', 'Algolia', 'Google Map Api'],
-          image: '/nuxtbnb.jpg',
-          git: 'https://github.com/xiaosasori/nuxt-bnb',
-          link: ''
+          name: 'Zingmp3 Clone',
+          description: 'An online music app which is a clone of zingmp3.vn. Fully featured like a music player and many other things...',
+          techs: ['Vite', 'Howler', 'Vue.js', 'TailwindCSS', 'Typescript'],
+          image: '/zing.png',
+          git: 'https://github.com/xiaosasori/vite-zingmp3',
+          link: 'http://ec2-52-221-214-168.ap-southeast-1.compute.amazonaws.com/'
         },
         {
           name: 'Vue 3 Components',
@@ -126,12 +126,12 @@ export default {
           link: 'https://xiaosasori.github.io/my-vue-components/?path=/story/datatable-sample--sample'
         },
         {
-          name: 'Tailwind Templates',
-          description: 'A collection of fully responsive HTML components and templates built with Tailwind CSS',
-          techs: ['Nuxt.js', 'TailwindCSS'],
-          image: '/templates.png',
-          git: 'https://github.com/xiaosasori/nuxt-tailwind',
-          link: 'https://xiaosasori.github.io/nuxt-tailwind//coca'
+          name: 'Tinyhouse Clone',
+          description: 'A Universal Javascript app cloning of Tinyhouse. This is a home-sharing app featuring authentication, data persistence, payments and deployment.',
+          techs: ['Vue.js', 'TailwindCSS', 'Apollo Graphql', 'mongodb', 'typescript'],
+          image: '/tinyhouse.png',
+          git: 'https://github.com/xiaosasori/tinyhouse-clone',
+          link: 'https://tinyhouse-vite.herokuapp.com/'
         }
       ],
       others: [
@@ -143,10 +143,10 @@ export default {
           link: 'https://xiaosasori.github.io/markdown-preview/'
         },
         {
-          name: 'Simple Chat',
-          description: 'A simple chat app with Go',
-          techs: ['Vue.js', 'Go'],
-          git: 'https://github.com/xiaosasori/go-vue-chat',
+          name: 'NuxtBnb',
+          description: 'A fully functional AirBnb clone powered by Nuxt.js. Covering the basics concepts like working with Maps API, accepting payments via Credit Cards,...',
+          techs: ['Nuxt.js', 'Algolia', 'Google Map Api'],
+          git: 'https://github.com/xiaosasori/nuxt-bnb',
           link: ''
         },
         {
@@ -157,24 +157,17 @@ export default {
           link: 'https://vue-forum-1e7a0.web.app'
         },
         {
+          name: 'Tailwind Templates',
+          description: 'A collection of fully responsive HTML components and templates built with Tailwind CSS',
+          techs: ['Nuxt.js', 'TailwindCSS'],
+          git: 'https://github.com/xiaosasori/nuxt-tailwind',
+          link: 'https://xiaosasori.github.io/nuxt-tailwind//coca'
+        },
+        {
           name: 'Batah',
           description: 'My capstone project. A system connects the lessee and the lessor as offices or coworking space from which to create a completely new ecosystem.',
           techs: ['Apollo GraphQL', 'Vue.js', 'Google Map Api', 'Paypal', 'MongoDB'],
           git: 'https://github.com/xiaosasori/batah',
-          link: ''
-        },
-        {
-          name: 'VueVue',
-          description: 'Simple image-sharing social application similar to Pinterest or Instagram. Authenticated users will be able to like and unlike, share, comment on, search for, edit, and delete image-related posts.',
-          techs: ['Vue.js', 'Vuetify', 'Apollo GraphQL', 'MongoDB'],
-          git: 'https://github.com/xiaosasori/vuevue',
-          link: ''
-        },
-        {
-          name: 'Vue Ecommerce Demo',
-          description: 'A simple ecommerce app',
-          techs: ['Vue.js', 'Firebase'],
-          git: 'https://github.com/xiaosasori/vue-shop',
           link: ''
         }
       ]
