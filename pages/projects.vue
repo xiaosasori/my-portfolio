@@ -7,8 +7,8 @@
       <li v-for="(project, index) in projects" :key="project.name" class="grid grid-cols-12 pj">
         <div class="relative pj-left" style="grid-row: 1 / 1">
           <div style="padding-bottom:62.2857%">
-            <div class="absolute inset-0 overflow-hidden rounded-lg">
-              <img class="w-full h-full ml-auto" :src="project.image" :alt="project.name">
+            <div class="absolute overflow-hidden rounded-lg">
+              <img class="w-full h-auto ml-auto" :src="project.image" :alt="project.name">
             </div>
           </div>
         </div>
