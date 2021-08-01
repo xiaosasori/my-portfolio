@@ -132,6 +132,14 @@ export default {
           image: '/tinyhouse.png',
           git: 'https://github.com/xiaosasori/tinyhouse-clone',
           link: 'https://tinyhouse-vite.herokuapp.com/'
+        },
+        {
+          name: 'WhatsApp Clone',
+          description: 'A simple realtime chat application cloning of Whatsapp. Implementing fully chat features like sending text, images, voice messages, playing voice messages, creating rooms,...',
+          techs: ['Vue.js', 'Firebase'],
+          image: '/whatsapp.png',
+          git: 'https://github.com/xiaosasori/vite-whatsapp-clone',
+          link: 'https://cocky-euler-010f2d.netlify.app/'
         }
       ],
       others: [
