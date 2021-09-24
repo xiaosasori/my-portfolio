@@ -111,7 +111,7 @@ export default {
       projects: [
         {
           name: 'Zingmp3 Clone',
-          description: 'An online music app which is a clone of zingmp3.vn. Fully featured like a music player and many other things...',
+          description: 'An online music app which is a clone of zingmp3.vn. A fully-featured app like a music player and many other things...',
           techs: ['Vite', 'Howler', 'Vue.js', 'TailwindCSS', 'Typescript'],
           image: '/zing.png',
           git: 'https://github.com/xiaosasori/vite-zingmp3',
@@ -126,8 +126,16 @@ export default {
           link: 'https://xiaosasori.github.io/my-vue-components/?path=/story/datatable-sample--sample'
         },
         {
+          name: 'Discord Clone',
+          description: 'A clone of the Discord web app. Implementing main features of the Discord app like chat with one another in real time, add friends, create channels, create share links to join a channel,...',
+          techs: ['Vue.js', 'vue-query', 'pinia', 'socket.io'],
+          image: '/discord.png',
+          git: 'https://github.com/xiaosasori/discord-clone-vite',
+          link: 'https://vite-discord.herokuapp.com/'
+        },
+        {
           name: 'Tinyhouse Clone',
-          description: 'A Universal Javascript app cloning of Tinyhouse. This is a home-sharing app featuring authentication, data persistence, payments and deployment.',
+          description: 'A full-stack clone of Tinyhouse web app. This is a home-sharing app featuring authentication, data persistence, payments and deployment.',
           techs: ['Vue.js', 'TailwindCSS', 'Apollo Graphql', 'mongodb', 'typescript'],
           image: '/tinyhouse.png',
           git: 'https://github.com/xiaosasori/tinyhouse-clone',
