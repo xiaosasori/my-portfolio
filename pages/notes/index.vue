@@ -35,19 +35,5 @@ export default {
     })
     return { articles }
   }
-  // mounted () {
-  // gsap.from('.card-note', {
-  //   duration: 0.4,
-  //   opacity: 0,
-  //   scale: 0.5,
-  //   y: 200,
-  //   ease: 'power0',
-  //   stagger: 0.25
-  // stagger: {
-  //   each: 0.5,
-  //   from: 'edges' // outside to center; 'center' for inverting animation
-  // }
-  // })
-  // }
 }
 </script>

@@ -29,7 +29,7 @@
         </div>
       </main>
       <aside class="sm:hidden lg:block">
-        <a href="https://youtu.be/7s6OHfdX9hA" target="_blank" rel="noopener noreferrer" class="block sticky top-24">
+        <a href="https://youtu.be/rDKl9GJdQjA&t=30s" target="_blank" rel="noopener noreferrer" class="block sticky top-24">
           <img src="/batchanhdao.jpeg" alt="The Noble Eightfold Path">
           <!-- <img src="https://images.unsplash.com/photo-1588392382834-a891154bca4d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" alt="ads"> -->
         </a>

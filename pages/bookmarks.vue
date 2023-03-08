@@ -39,7 +39,7 @@
         </a>
       </main>
       <aside class="hidden p-2 md:block">
-        <a href="https://youtu.be/7s6OHfdX9hA" target="_blank" rel="noopener noreferrer" class="sticky block top-24">
+        <a href="https://youtu.be/rDKl9GJdQjA&t=30s" target="_blank" rel="noopener noreferrer" class="sticky block top-24">
           <img src="/batchanhdao.jpeg" alt="The Noble Eightfold Path">
         </a>
       </aside>

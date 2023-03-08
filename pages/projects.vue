@@ -112,26 +112,26 @@ export default {
         {
           name: 'Zingmp3 Clone',
           description: 'An online music app which is a clone of zingmp3.vn. A fully-featured app like a music player and many other things...',
-          techs: ['Vite', 'Howler', 'Vue.js', 'TailwindCSS', 'Typescript'],
+          techs: ['Howler', 'Vue.js', 'TailwindCSS', 'Typescript'],
           image: '/zing.png',
           git: 'https://github.com/xiaosasori/vite-zingmp3',
-          link: 'http://ec2-52-221-214-168.ap-southeast-1.compute.amazonaws.com/'
+          link: 'http://ec2-13-213-35-213.ap-southeast-1.compute.amazonaws.com/'
         },
         {
           name: 'Vue 3 Components',
           description: 'A showcase of my components built with Vue 3. Those are all extensible and easy to custom including DataTable, DragDrop, Slider and more!',
-          techs: ['Vue.js', 'Storybook'],
+          techs: ['Vue.js', 'TailwindCSS', 'Vueuse', 'Histoire', 'Typescript'],
           image: '/vue_components.png',
-          git: 'https://github.com/xiaosasori/my-vue-components',
-          link: 'https://xiaosasori.github.io/my-vue-components/?path=/story/datatable-sample--sample'
+          git: 'https://github.com/xiaosasori/my-components',
+          link: 'https://xiaosasori.github.io/my-components'
         },
         {
           name: 'Discord Clone',
           description: 'A clone of the Discord web app. Implementing main features of the Discord app like chat with one another in real time, add friends, create channels, create share links to join a channel,...',
-          techs: ['Vue.js', 'vue-query', 'pinia', 'socket.io'],
+          techs: ['Vue.js', 'Vue-query', 'Pinia', 'Socket.io', 'TailwindCSS'],
           image: '/discord.png',
           git: 'https://github.com/xiaosasori/discord-clone-vite',
-          link: 'https://vite-discord.herokuapp.com/'
+          link: 'https://vue-discord.herokuapp.com/'
         },
         {
           name: 'Tinyhouse Clone',
